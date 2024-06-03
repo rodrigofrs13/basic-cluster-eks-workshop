@@ -32,6 +32,9 @@ resource "aws_eks_addon" "vpc-cni" {
       "eks_addon" = "vpc-cni"
     }
   )
+  depends_on = [
+      module.eks
+  ]  
 }
 
 # https://aws.amazon.com/blogs/containers/amazon-ebs-csi-driver-is-now-generally-available-in-amazon-eks-add-ons/ 
