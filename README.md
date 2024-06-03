@@ -12,6 +12,7 @@
 #### O arquivo terraform.tfvarscontém as variáveis que podem ser ajustadas de acordo com o ambiente, antes de iniciar o setup.
 
 - Nome do cluster
+
 `cluster_name = "cluster-workshop"`
 
 - Versão do cluster
