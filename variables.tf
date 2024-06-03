@@ -20,7 +20,6 @@ variable "cluster_enabled_log_types" {
 }
 
 
-
 variable "cluster_endpoint_public_access_cidrs" {
   description = "A list of Allow Public IP"
   type        = list(string)

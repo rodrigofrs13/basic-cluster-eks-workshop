@@ -48,12 +48,14 @@ module "vpc" {
   }
 }
 
+
+
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "20.8.5"
 
-  cluster_name    = var.cluster_name
-  cluster_version = var.eks_version
+  cluster_name                            = var.cluster_name
+  cluster_version                         = var.eks_version
   cluster_enabled_log_types               = var.cluster_enabled_log_types 
   cluster_endpoint_public_access_cidrs    = var.cluster_endpoint_public_access_cidrs
 
