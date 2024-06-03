@@ -1,2 +1,2 @@
-# basic-cluster-eks-workshop
-Amazon EKS básico para Workshops e Demos
+# cluster-autoscaler-terraform-helm
+Escalonamento automático com Amazon EKS e Cluster Autoscaler utilizando Terraform e Helm
