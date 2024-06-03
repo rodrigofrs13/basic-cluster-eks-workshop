@@ -34,14 +34,19 @@
 - CIDR da VPC
 
 `cidr = "10.0.0.0/16"`
+
 `enable_nat_gateway = "true"`
+
 `single_nat_gateway = "true"`
+
 `enable_dns_hostnames = "true"`
 
 - Versão dos Addons
 
 `version_kube_proxy = "v1.29.0-eksbuild.1"`
+
 `version_coredns = "v1.11.1-eksbuild.4"`
+
 `version_vpc-cni = "v1.16.0-eksbuild.1"`
 
 - Para efetuar o setup vamos executar o Terraform, para isso execute o comando abaixo:
