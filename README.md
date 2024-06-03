@@ -1,40 +1,40 @@
 Cluster Amazon EKS básico para Workshops e Demos
 
-##Setup
+# Setup
 
-#Clone do repositório execute o comando abaixo:
+## Clone do repositório execute o comando abaixo:
 git clone https://github.com/rodrigofrs13/basic-cluster-eks-workshop
 
-#Acesse o diretório onde está o código Terraform.
+## Acesse o diretório onde está o código Terraform.
 cd basic-cluster-eks-workshop
 
-#O arquivo terraform.tfvarscontém as variáveis que podem ser ajustadas de acordo com o ambiente, antes de iniciar o setup.
-#Por exemplo:
-Nome que será utilizado no cluster
+## O arquivo terraform.tfvarscontém as variáveis que podem ser ajustadas de acordo com o ambiente, antes de iniciar o setup.
+## Por exemplo:
+### Nome que será utilizado no cluster
 cluster_name = "cluster-workshop" 
 
-Versão do cluster
+### Versão do cluster
 eks_version = "1.30"
 
-Região onde será feito o setup
+### Região onde será feito o setup
 region = "us-east-1"
 
-Range de IP liberado para acessar o cluster
+### Range de IP liberado para acessar o cluster
 cluster_endpoint_public_access_cidrs = ["0.0.0.0/0"]
 
-Logs habilitados no cluster
+### Logs habilitados no cluster
 cluster_enabled_log_types = ["api", "audit", "authenticator","controllerManager","scheduler"] 
 
-CIDR da VPC
+### CIDR da VPC
 cidr = "10.0.0.0/16"
 enable_nat_gateway = "true"
 single_nat_gateway = "true"
 enable_dns_hostnames = "true"
 
-Versão dos Addons
+### Versão dos Addons
 version_kube_proxy = "v1.29.0-eksbuild.1"
 version_coredns = "v1.11.1-eksbuild.4"
 version_vpc-cni = "v1.16.0-eksbuild.1"
 
-#Para efetuar o setup vamos executar o Terraform, para isso execute o comando abaixo:
+## Para efetuar o setup vamos executar o Terraform, para isso execute o comando abaixo:
 terraform init && terraform plan && terraform apply --auto-approve
