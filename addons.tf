@@ -8,6 +8,9 @@ resource "aws_eks_addon" "kube_proxy" {
       "eks_addon" = "kube-proxy"
     }
   )
+  depends_on = [
+      module.eks
+  ] 
 }
 
 resource "aws_eks_addon" "core_dns" {
@@ -20,6 +23,9 @@ resource "aws_eks_addon" "core_dns" {
       "eks_addon" = "coredns"
     }
   )
+  depends_on = [
+      module.eks
+  ] 
 }
 
 resource "aws_eks_addon" "vpc-cni" {
